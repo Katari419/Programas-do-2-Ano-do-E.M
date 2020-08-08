@@ -1,0 +1,97 @@
+package ;
+
+import javax.swing.JOptionPane;
+
+public class Gui 
+{
+    public static void main(String[] args) 
+    {
+        while(true)
+        {
+            String niver = JOptionPane.showInputDialog("Digite sua data de nascimento:");
+            String atual = JOptionPane.showInputDialog("Qual o ano atual?");
+               
+            int niver_int = Integer.parseInt(niver);
+            int atual_int = Integer.parseInt(atual);
+            int idade = atual_int - niver_int;
+            JOptionPane.showMessageDialog(null,"sua idade é/ou quase: "+idade);
+            
+            int op = JOptionPane.showConfirmDialog(null, "Mais uma rodada?");
+            if(op == 1){break;}
+        }
+        
+     
+    }
+}
+
+
+PROGRAMA 2
+
+package calculator;
+
+import javax.swing.JOptionPane;
+
+public class Calculator {
+
+    public static void main(String[] args) {
+
+        Double num1;
+        Double num2;
+        String op;
+
+        String numero1
+                = JOptionPane.showInputDialog("digite o Primeiro número");
+        String numero2
+                = JOptionPane.showInputDialog("digite o Segundo número");
+
+        for (int i = 0; i < 2; i++) {
+
+            String operacao
+                    = JOptionPane.showInputDialog("digite qual a operação ( + , - , / , *)");
+
+            if (operacao.equals("+")) {
+                num1 = Double.parseDouble(numero1);
+                num2 = Double.parseDouble(numero2);
+                Double soma = num1 + num2;
+                JOptionPane.showMessageDialog(null, "o resultado da soma é: " + soma);
+            }
+
+            if (operacao.equals("-")) {
+                num1 = Double.parseDouble(numero1);
+                num2 = Double.parseDouble(numero2);
+                Double subtracao = num1 - num2;
+                JOptionPane.showMessageDialog(null, "o resultado da subtração é: " + subtracao);
+            }
+
+            if (operacao.equals("/")) {
+                num1 = Double.parseDouble(numero1);
+                num2 = Double.parseDouble(numero2);
+                Double divisao = num1 / num2;
+                JOptionPane.showMessageDialog(null, "o resultado da divisão é: " + divisao);
+            }
+
+            if (operacao.equals("*")) {
+                num1 = Double.parseDouble(numero1);
+                num2 = Double.parseDouble(numero2);
+                Double multiplicacao = num1 * num2;
+                JOptionPane.showMessageDialog(null, "o resultado da multiplicação é: " + multiplicacao);
+            }
+
+            if (operacao.equals("+")) {
+            } else {
+                if (operacao.equals("-")) {
+                } else {
+                    if (operacao.equals("/")) {
+                    } else {
+                        if (operacao.equals("*")) {
+                        } else {
+                            System.out.println("digite uma opção válida");
+                            i = 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
